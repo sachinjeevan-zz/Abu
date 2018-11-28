@@ -20,6 +20,7 @@ class User < ApplicationRecord
             user = User.new(:email => data.email, :password => Devise.friendly_token[0,20])
             user.skip_confirmation!
             user.save! 
+            user
           end
 end
 end
