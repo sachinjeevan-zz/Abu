@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'foundation-rails'
 gem 'jquery-turbolinks'
 # Use sqlite3 as the database for Active Record
+gem 'pg'
 gem 'omniauth-facebook'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -22,7 +23,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'sprockets-es6'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -48,13 +49,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'sqlite3'
+  
 end
-group :production do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'pg'
-end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
