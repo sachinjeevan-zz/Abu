@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '2bff53a91e1cf7372414c438986527142bd10a1f91a7f2c6349d38078f05c0deeae27015ae9e87343438410a295790d4a08604a5f97b57ea5486672a65663aac'
+  # config.secret_key = 'b3b755f4beca533cb04d3b5d075210610f1d319ad2324c8e05748bb3be2a73d9b80bf930215a86d10a6a43312d7a533c5b44047520deb22e3e5fd5ec48ca45b0'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -18,8 +18,8 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
+  config.mailer_sender = 'sachinjeevan2506@gmail.com'
+  config.omniauth :facebook, "532568657168812", "83f2d415cf5261a8f7a90064744c03a4", callback_url: "https://abdulabu.herokuapp.com/users/auth/facebook/callback"
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '85891b022965d1dc572516fe7a8ca01ff5a928ffe78ddc5176a820386a54e00d386230611968a12fbc59c2cc5d928d3e037d56db148490c059974063309f1cde'
+  # config.pepper = 'd1539635df43b0d1ea7262130940a8129f1fa9ca1f979a1cf39a2c3eed2f0005b8a43fb98641822d89311461544082e614dd3285293f025a35de0c9de0d3301b'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
