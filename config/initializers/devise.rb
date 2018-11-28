@@ -19,16 +19,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'sachinjeevan2506@gmail.com'
- config.omniauth :facebook,  "364948830740939", "914fe7316f1bdc208ae2071aa581dd99",
-                  client_options: {
-                    site: "https://graph.facebook.com/v2.6",
-                    authorize_url: "https://www.facebook.com/v2.6/dialog/oauth",
-                    token_url: "oauth/access_token"
-                  },
-                  token_params: { parse: :json },
-                  scope: "public_profile, email",
-                  secure_image_url: true,
-                  info_fields: "rails g controller sessionsname,email"
+  config.omniauth :facebook, "532568657168812", "83f2d415cf5261a8f7a90064f44c03a4", callback_url: "https://abdulabu.herokuapp.com/users/auth/facebook/callback"
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
